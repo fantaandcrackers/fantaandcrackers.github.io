@@ -1,23 +1,24 @@
+<div>
+    <!-- jQuery library -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
-<!-- jQuery library -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href="http://cornerstonerehl.com/static/shared/stylesheets/base.css"></link>
 
-<link rel="stylesheet" href="http://cornerstonerehl.com/static/shared/stylesheets/base.css"></link>
+    <script>
+        $( document ).ready(function() {
+            $("#iframe").on("load", function () {
+                // var $head = $("#iframe").contents().find("head"); 
 
-<script>
-    $( document ).ready(function() {
-        $("#iframe").on("load", function () {
-            // var $head = $("#iframe").contents().find("head"); 
-
-            var url = "{% static 'shared/stylesheets/base.css' %}";
-            $("head").append($("<link/>", { rel: "stylesheet", href: url, type: "text/css" } ));
+                var url = "{% static 'shared/stylesheets/base.css' %}";
+                $("head").append($("<link/>", { rel: "stylesheet", href: url, type: "text/css" } ));
+            });
         });
-    });
-</script>
+    </script>
 
 
-<iframe src="https://secure.web-loans.com/secure.aspx?p=7&u=cornerstone.web-loans.com">
-</iframe>
+    <iframe src="https://secure.web-loans.com/secure.aspx?p=7&u=cornerstone.web-loans.com">
+    </iframe>
+</div>
