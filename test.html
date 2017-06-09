@@ -13,7 +13,7 @@
             $("#iframe").on("load", function () {
                 // var $head = $("#iframe").contents().find("head"); 
 
-                var url = "{% static 'shared/stylesheets/base.css' %}";
+                var url = "http://cornerstonerehl.com/static/shared/stylesheets/base.css";
                 $("head").append($("<link/>", { rel: "stylesheet", href: url, type: "text/css" } ));
             });
             parent.document.body.style.backgroundColor = "red";
