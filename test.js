@@ -36,7 +36,7 @@ $(window).on('load', function(){
     data['butImageLogin.x'] = 50;
     data['butImageLogin.y'] = 10;
 
-    $.ajax(;
+    $.ajax(
       url: login_post_url,
       type: 'POST',
       data: data
@@ -44,27 +44,27 @@ $(window).on('load', function(){
   };
 
 
-  function login_webcaster(json) {
-    $.ajax({
-      url: login_post_url,
-      type: 'POST',
-      dataType: 'json',
-      data: json,
-      success: login_to_iframe
-    });
-  };
+  // function login_webcaster(json) {
+  //   $.ajax({
+  //     url: login_post_url,
+  //     type: 'POST',
+  //     dataType: 'json',
+  //     data: json,
+  //     success: login_to_iframe
+  //   });
+  // };
 
-  function login_to_iframe(data) {
-    post_to_iframe(data, login_post_url, 'iframe');
-  }
+  // function login_to_iframe(data) {
+  //   post_to_iframe(data, login_post_url, 'iframe');
+  // }
 
-  function post_to_iframe(data,url,target){
-      $('body').append('<form action="'+url+'" method="post" target="'+target+'" id="postToIframe"></form>');
-      $.each(data,function(n,v){
-          $('#postToIframe').append('<input type="hidden" name="'+n+'" value="'+v+'" />');
-      });
-      $('#postToIframe').submit().remove();
-  }
+  // function post_to_iframe(data,url,target){
+  //     $('body').append('<form action="'+url+'" method="post" target="'+target+'" id="postToIframe"></form>');
+  //     $.each(data,function(n,v){
+  //         $('#postToIframe').append('<input type="hidden" name="'+n+'" value="'+v+'" />');
+  //     });
+  //     $('#postToIframe').submit().remove();
+  // }
 
 
 });
