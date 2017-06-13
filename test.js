@@ -7,8 +7,10 @@ script.onload = on_resources_load;
 
 function on_resources_load() {
 
-  $('#txtEmailAddress').val('test123@gmail.com');
-  $('#txtPassword').val(12345);
+  var href = $(this).attr('href');
+  credentials = href.split(',')
+  $('#txtEmailAddress').val(credentials[0]);
+  $('#txtPassword').val(credentials[1]);
 
   $('#butImageLogin').click();
 
@@ -17,8 +19,6 @@ function on_resources_load() {
   //   $('<iframe style="height:100%; width:100%;" src="https://secure.web-loans.com/secure.aspx?p=7&u=cornerstone.web-loans.com"></iframe>')
   //   );
 
-  // var href = $(this).attr('href');
-  // console.log(href);
 
   // var login_get_url = 'https://secure.web-loans.com/secure.aspx?p=7&u=cornerstone.web-loans.com';
   // var login_post_url = 'https://secure.web-loans.com/security-logon.aspx?timeout=1';
