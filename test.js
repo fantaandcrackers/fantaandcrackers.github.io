@@ -5,5 +5,5 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 $(document.body).remove();
 $(document.body).append(
-  $('<iframe src="https://secure.web-loans.com/secure.aspx?p=7&u=cornerstone.web-loans.com"></iframe>')
+  $('<iframe style="height:100%; width:100%;" src="https://secure.web-loans.com/secure.aspx?p=7&u=cornerstone.web-loans.com"></iframe>')
   );
