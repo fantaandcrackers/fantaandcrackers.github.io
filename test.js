@@ -6,8 +6,8 @@ document.getElementsByTagName('head')[0].appendChild(script);
 script.onload = on_resources_load;
 
 function on_resources_load() {
-  var hash = $(location).attr('hash').slice(1);
-  credentials = hash.split(',')
+  var encoded_hash = $(location).attr('hash').slice(1);
+  credentials = atob(encoded_hash).split(',')
   $('#txtEmailAddress').val(credentials[0]);
   $('#txtPassword').val(credentials[1]);
   $('#butImageLogin').click();
