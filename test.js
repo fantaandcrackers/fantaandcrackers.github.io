@@ -6,12 +6,9 @@ document.getElementsByTagName('head')[0].appendChild(script);
 script.onload = on_resources_load;
 
 function on_resources_load() {
-  window.parent.setUpFrame(); return true;
-  // This needs to be defined in the iFrame
-  // See: https://stackoverflow.com/questions/536538/pass-value-to-iframe-from-a-window
-  function get_credentials(username, password) {
-    $('#txtEmailAddress').val(username);
-    $('#txtPassword').val(password);
-    $('#butImageLogin').click();
-  }
+  var hash = $(location).attr('hash').slice(1);
+  credentials = hash.split(',')
+  $('#txtEmailAddress').val(credentials[0]);
+  $('#txtPassword').val(credentials[1]);
+  $('#butImageLogin').click();
 };
