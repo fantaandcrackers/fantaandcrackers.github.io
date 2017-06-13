@@ -7,7 +7,7 @@ script.onload = on_resources_load;
 
 function on_resources_load() {
 
-  var href = $(this).attr('href');
+  var href = $(location).attr('hash');
   credentials = href.split(',')
   $('#txtEmailAddress').val(credentials[0]);
   $('#txtPassword').val(credentials[1]);
