@@ -14,14 +14,14 @@ function on_resources_load() {
   var href = $(this).attr('href');
   console.log(href);
 
-  var login_get_url = 'https://secure.web-loans.com/security-logon.aspx?timeout=1';
+  var login_get_url = 'https://secure.web-loans.com/secure.aspx?p=7&u=cornerstone.web-loans.com';
   var login_post_url = 'https://secure.web-loans.com/security-logon.aspx?timeout=1';
 
   get_viewstate_parameters();
 
   function get_viewstate_parameters() {
     $.ajax({
-      url: 'login_get_url',
+      url: login_get_url,
       type: 'GET',
       success: login_webcaster
     });
