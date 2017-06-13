@@ -36,7 +36,7 @@ $(window).on('load', function(){
     data['butImageLogin.x'] = 50;
     data['butImageLogin.y'] = 10;
 
-    $.ajax(
+    $.ajax({
       url: login_post_url,
       type: 'POST',
       data: data
