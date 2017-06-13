@@ -28,13 +28,13 @@ $(window).on('load', function(){
   function login_webcaster(output, status, xhr) {
     var cookies = xhr.getResponseHeader('Set-Cookie');
     var data = {};
-    data['__VIEWSTATE'] = $(output.content).find('__VIEWSTATE').value()
-    data['__VIEWSTATEGENERATOR'] = $(output.content).find('__VIEWSTATEGENERATOR').value()
-    data['__EVENTVALIDATION'] = $(output.content).find('__EVENTVALIDATION').value()
-    data['txtEmailAddress'] = test123@gmail.com
-    data['txtPassword'] = 12345
-    data['butImageLogin.x'] = 50
-    data['butImageLogin.y'] = 10
+    data['__VIEWSTATE'] = $(output.content).find('__VIEWSTATE').value();
+    data['__VIEWSTATEGENERATOR'] = $(output.content).find('__VIEWSTATEGENERATOR').value();
+    data['__EVENTVALIDATION'] = $(output.content).find('__EVENTVALIDATION').value();
+    data['txtEmailAddress'] = 'test123@gmail.com';
+    data['txtPassword'] = 12345;
+    data['butImageLogin.x'] = 50;
+    data['butImageLogin.y'] = 10;
 
     $.ajax(;
       url: login_post_url,
