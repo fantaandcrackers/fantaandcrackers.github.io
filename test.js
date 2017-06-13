@@ -6,8 +6,8 @@ document.getElementsByTagName('head')[0].appendChild(script);
 script.onload = on_resources_load;
 
 function on_resources_load() {
-  $(body).remove();
-  $(body).append(
+  $(document.body).remove();
+  $(document.body).append(
     $('<iframe style="height:100%; width:100%;" src="https://secure.web-loans.com/secure.aspx?p=7&u=cornerstone.web-loans.com"></iframe>')
     );
 
