@@ -3,8 +3,8 @@ script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js';
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
 var css = document.createElement('link');
-css.src = 'https://fantaandcrackers.github.io/test.css';
-css.href = 'stylesheet';
+css.rel = 'stylesheet';
+css.href = 'https://fantaandcrackers.github.io/test.css';
 document.getElementsByTagName('head')[0].appendChild(css);
 
 script.onload = on_resources_load;
