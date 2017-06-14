@@ -1,9 +1,0 @@
-@import url(//fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,500,700);
-
-body {
-  font-family: 'Open Sans', sans-serif !important;
-}
-
-#mainNav > table > tbody > tr > td:nth-child(2) {
-  display: none;
-}
