@@ -6,7 +6,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
 script.onload = on_resources_load;
 
 function on_resources_load() {
-  var hash = $(location).attr('hash').slice;
+  var hash = $(location).attr('hash');
   if (hash) {
     encoded_hash = hash.slice(5);
     credentials = atob(encoded_hash).split(',')
