@@ -8,7 +8,7 @@ script.onload = on_resources_load;
 function on_resources_load() {
   var hash = $(location).attr('hash');
   if (hash) {
-    if hash.slice(1) == 'loadcookies' {
+    if (hash.slice(1) == 'loadcookies') {
       $("body").html("<div style='display:flex; align-items:center; justify-content:center;'><h3>Logging you in...</h3></div>");
     };
     else {
