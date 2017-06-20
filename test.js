@@ -21,7 +21,7 @@ if (hash) {
 function on_resources_load() {
   var hash = $(location).attr('hash');
   if (hash) {
-    if ((hash.slice(1) != 'loadcookies') and (hash.slice(1) != 'load-forgot-password')) {
+    if ((hash.slice(1) != 'loadcookies') && (hash.slice(1) != 'load-forgot-password')) {
       encoded_hash = hash.slice(5);
       credentials = atob(encoded_hash).split(',')
       $('#txtEmailAddress').val(credentials[0]);
