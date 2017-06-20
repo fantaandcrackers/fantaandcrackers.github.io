@@ -10,7 +10,7 @@ function on_resources_load() {
   if (hash) {
     if (hash.slice(1) == 'loadcookies') {
       $("body").html("<div style='display:flex; align-items:center; justify-content:center;'><h3>Logging you in...</h3></div>");
-    };
+    }
     else {
       encoded_hash = hash.slice(5);
       credentials = atob(encoded_hash).split(',')
