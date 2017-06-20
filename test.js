@@ -10,9 +10,11 @@ function on_resources_load() {
   if (hash) {
     if (hash.slice(1) == 'loadcookies') {
       $("body").html("<div style='display:flex; align-items:center; justify-content:center;'><h3>Logging you in...</h3></div>");
+      closeWindow();
     }
     else if (hash.slice(1) == 'load-forgot-password') {
       $("body").html("<div style='display:flex; align-items:center; justify-content:center;'><h3>Loading...</h3></div>");
+      closeWindow();
     }
     else {
       encoded_hash = hash.slice(5);
@@ -22,4 +24,10 @@ function on_resources_load() {
       $('#butImageLogin').click();
     };
   };
+};
+
+function closeWindow() {
+  setTimeout(function() {
+    window.close();
+  }, 600);
 };
