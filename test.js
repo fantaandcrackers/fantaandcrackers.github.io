@@ -5,18 +5,23 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 script.onload = on_resources_load;
 
+var hash = window.location.hash;
+if (hash) {
+  if (hash.slice(1) == 'loadcookies') {
+    document.body.innerHTML = "<div style='display:flex; align-items:center; justify-content:center;'><h3>Logging you in...</h3></div>";
+    closeWindow();
+  }
+  else if (hash.slice(1) == 'load-forgot-password') {
+    document.body.innerHTML = "<div style='display:flex; align-items:center; justify-content:center;'><h3>Loading...</h3></div>";
+    closeWindow();
+  };
+};
+
+
 function on_resources_load() {
   var hash = $(location).attr('hash');
   if (hash) {
-    if (hash.slice(1) == 'loadcookies') {
-      $("body").html("<div style='display:flex; align-items:center; justify-content:center;'><h3>Logging you in...</h3></div>");
-      closeWindow();
-    }
-    else if (hash.slice(1) == 'load-forgot-password') {
-      $("body").html("<div style='display:flex; align-items:center; justify-content:center;'><h3>Loading...</h3></div>");
-      closeWindow();
-    }
-    else {
+    if ((hash.slice(1) != 'loadcookies') and (hash.slice(1) != 'load-forgot-password')) {
       encoded_hash = hash.slice(5);
       credentials = atob(encoded_hash).split(',')
       $('#txtEmailAddress').val(credentials[0]);
